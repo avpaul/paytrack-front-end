@@ -1,7 +1,9 @@
-nav {
-  background-color: rgb(54, 24, 24);
+nav.nav {
+  padding-left: 72px;
+  padding-right: 72px;
+  background-color: #0E3A53;
+  color: #ffffff;
+  .menu-item{
+    color: #ffffff;
+  }
 }
-// * {
-//   padding: 0;
-//   margin: 0;
-// }

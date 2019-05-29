@@ -1,0 +1,58 @@
+.list-wrapper {
+  margin: 16px;
+}
+.list-title {
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.account-list-wrapper{
+  max-width: 350px;
+}
+
+.card {
+  max-width: 400px;
+  padding: 16px;
+  margin: 16px;
+  background-color: #a9bcd0;
+  .card-title {
+    padding: 0 8px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+  .card-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+.record-list {
+  width: 600px;
+}
+
+.btn.btn-add-account,
+.btn.btn-add-record {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-left: auto;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+.btn-add-account {
+  background-color: #020202;
+}
+
+.btn.btn-add-record {
+  background-color: #0e3a53;
+}

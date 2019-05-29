@@ -1,0 +1,22 @@
+.account {
+  width: 150px;
+  height: 70px;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 2px;
+  display: inline-block;
+  background-color: #641c35;
+  color: #ffffff;
+}
+.account-name {
+  display: block;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.account-balance {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+

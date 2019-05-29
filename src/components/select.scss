@@ -1,0 +1,55 @@
+.input-field.input-field-select {
+  input {
+    border-bottom: 1px solid #000000;
+    text-transform: capitalize;
+    color: transparent;
+    text-shadow: 0 0 0 #000000;
+  }
+  label {
+    padding-top: 14px;
+  }
+  &.hasValue {
+    label {
+      padding-top: 0;
+    }
+  }
+  .icon {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 1.8rem;
+  }
+  .input-select-options {
+    position: absolute;
+    top: 25%;
+    right: 8px;
+    min-width: 150px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    z-index: 1000000;
+    @extend .z-depth-1;
+    &.active {
+      display: block;
+    }
+    ul {
+      list-style: none;
+      li {
+        padding: 8px;
+        padding-left: 16px;
+        font-size: 1.3rem;
+        text-transform: capitalize;
+        &:hover {
+          background-color: #00000014;
+        }
+      }
+    }
+  }
+}
+
+/* 2dp elevation modified*/
+.z-depth-1 {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}

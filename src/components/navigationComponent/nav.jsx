@@ -1,30 +1,21 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './nav.scss';
 
-export default class Nav extends Component {
-  constructor(params) {
-    super(params);
-    this.state = {
-      title: 'paytrack',
-    };
-  }
+const nav = () => (
+  <nav className="nav">
+    <Link to="/" className="nav-logo">
+      PayTrack
+    </Link>
 
-  render() {
-    return (
-      <Router>
-        <nav>
-          <Link to="/">PayTrack</Link>
-          <div className="nav-spacer" />
-          <div className="menu">
-            <Link to="/">paid</Link>
-            <Link to="/">consider</Link>
-            <Link to="/">settings</Link>
-            <Link to="/">profile</Link>
-          </div>
-          <img src="" alt="" srcset="hello"/>
-        </nav>
-      </Router>
-    );
-  }
-}
+    <div className="nav-spacer" />
+    <div className="nav-menu">
+      <Link to="/" className="menu-item">paid</Link>
+      <Link to="/" className="menu-item">consider</Link>
+      <Link to="/" className="menu-item">settings</Link>
+      <Link to="/" className="menu-item">profile</Link>
+    </div>
+  </nav>
+);
+
+export default nav;

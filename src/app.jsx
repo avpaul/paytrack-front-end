@@ -1,13 +1,33 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import propTypes from 'prop-types';
+import { connect } from 'react-redux';
 import NavComponent from './components/navigationComponent/nav';
+import AccountList from './components/accountList';
+import RecordList from './components/recordList';
+import './scss/main.scss';
+import './components/global.scss';
 
-const App = () => (
-  <div>
+const App = ({ records, accounts, ...props }) => (
+  <Router>
     <NavComponent />
-    <dic className="container">
-      <div>This is my home page</div>
-    </dic>
-  </div>
+    <div className="container main-content">
+      <RecordList records={records} {...props} />
+      <AccountList accounts={accounts} {...props} />
+    </div>
+  </Router>
 );
 
-export default App;
+App.propTypes = {
+  records: propTypes.arrayOf(propTypes.object).isRequired,
+  accounts: propTypes.arrayOf(propTypes.object).isRequired,
+};
+
+function mapStateToProps(state) {
+  return {
+    records: state.records,
+    accounts: state.accounts,
+  };
+}
+
+export default connect(mapStateToProps)(App);

@@ -7,31 +7,37 @@
   min-width: 280px;
   border-bottom: 1px #fff solid;
   margin: 16px 8px;
+  transition: top 0.25s ease, border-bottom-width 0.25s ease-in-out;
 
   label {
     position: absolute;
+    width: calc(100% - 24px);
     top: 50%;
     transform: translateY(-50%);
-    text-transform: uppercase;
     box-sizing: border-box;
     font-family: inherit;
+    text-transform: capitalize;
     transition: top 0.2s ease, transform 0.2s ease;
   }
-  &.focus {
+  &.active {
     border-bottom-width: 2px;
   }
-  &.active {
+  &.hasValue {
     label {
       top: 10%;
       transform: none;
       font-size: 14px;
       color: #a37c2775;
     }
+    input {
+      top: 24px;
+    }
   }
-  input,textarea {
+  input,
+  textarea {
     box-sizing: border-box;
     position: absolute;
-    bottom: 0;
+    top: 12px;
     left: 0;
     right: 0;
     width: 100%;
@@ -41,6 +47,7 @@
     font-family: inherit;
     border: none;
   }
+
   input:focus {
     outline: none;
   }
@@ -54,7 +61,7 @@
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus,
   input:-internal-autofill-selected {
-    -webkit-box-shadow: 0 0 0px 1000px #eeeeee inset;
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff00 inset;
     transition: background-color 5000s ease-in-out 0s;
   }
   .btn {
@@ -84,19 +91,19 @@
     position: absolute;
     bottom: -20px;
     right: 8px;
-    font-size: .8rem;
-    &::first-letter{
+    font-size: 0.8rem;
+    &::first-letter {
       text-transform: uppercase;
     }
-    &.active{
+    &.active {
       display: inline-block;
     }
   }
 
-  textarea{
+  textarea {
     top: 42px;
     height: auto;
-    &:focus{
+    &:focus {
       outline: none;
     }
   }

@@ -49,7 +49,7 @@ $xs-min: 30rem;
 * {
   padding: 0;
   margin: 0;
-  font-family: "Lato", "Courier new";
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 400;
   box-sizing: border-box;
@@ -82,9 +82,7 @@ a[href] {
         color: #fff;
       }
       .btn {
-        //   .icon {
         color: #fff;
-        //   }
       }
     }
     @media screen and (max-width: $xs-min) {
@@ -95,7 +93,6 @@ a[href] {
 
 .footer-logo-text {
   padding-left: 16px;
-  font-family: "Ubuntu", "Courier new";
   font-size: 1.6rem;
   font-weight: 700;
 }

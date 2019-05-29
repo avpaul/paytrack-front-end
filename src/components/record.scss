@@ -1,0 +1,76 @@
+.record,
+.record-description {
+  display: flex;
+  flex-direction: row;
+}
+
+.record {
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 8px;
+  outline: none;
+  background-color: #dadff7;
+  border-bottom: 2px #0e3a53 solid;
+}
+
+.record-category-icon {
+  height: 48px;
+  width: 48px;
+  line-height: 48px;
+  border-radius: 50%;
+  &.icon-attach_money {
+    background-color: #f5ab31;
+  }
+  &.icon-nature_people {
+    background-color: #e79295;
+  }
+  &.icon-accessibility_new {
+    background-color: #32483f;
+  }
+  i {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: inherit;
+    font-size: 2rem;
+    color: #ffffff;
+  }
+}
+.record-description {
+  padding-left: 8px;
+}
+.record-description-left {
+  width: 400px;
+}
+.record-description-right {
+  width: 120px;
+}
+.record-category-name {
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+.record-account {
+  text-transform: capitalize;
+}
+
+.record-notes,
+.record-date {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+.record-amount,
+.record-date {
+  text-align: end;
+}
+.record-date {
+  padding-top: 8px;
+  text-transform: capitalize;
+}
+
+.record-type-expense {
+  color: #d72638;
+}
+.record-type-income {
+  color: #83a883;
+}
