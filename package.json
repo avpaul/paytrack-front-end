@@ -4,11 +4,11 @@
   "description": "Nowadays businesses accepts many forms of payments, from mobile money to credit card. Individuals also uses many forms of payment. How do you keep track of your finances in one place and in a convenient way? This is PayTrack, track all your finances in one place to stay ahead!",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "test:watch": "jest --watch",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open --mode development",
-    "coveralls": "cat ./coverage/lcov.info"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
