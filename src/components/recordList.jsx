@@ -140,8 +140,4 @@ RecordList.propTypes = {
   records: propTypes.arrayOf(propTypes.object).isRequired
 };
 
-// RecordList.defaultProps = {
-//   records: []
-// };
-
 export default RecordList;

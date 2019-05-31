@@ -3,29 +3,12 @@
   "version": "1.0.0",
   "description": "Nowadays businesses accepts many forms of payments, from mobile money to credit card. Individuals also uses many forms of payment. How do you keep track of your finances in one place and in a convenient way? This is PayTrack, track all your finances in one place to stay ahead!",
   "main": "webpack.config.js",
-  "jest": {
-    "setupFiles": [
-      "<rootDir>/src/__tests__/setup/setupEnzyme.js"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/src/__tests__/setup/"
-    ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.scss$": "<rootDir>/src/__tests__/setup/cssTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ]
-  },
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --mode development"
+    "start": "webpack-dev-server --open --mode development",
+    "coveralls": "cat ./coverage/lcov.info"
   },
   "repository": {
     "type": "git",
@@ -70,6 +53,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
+    "coveralls": "^3.0.3",
     "css-loader": "^2.1.1",
     "dotenv": "^8.0.0",
     "enzyme": "^3.9.0",
