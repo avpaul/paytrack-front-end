@@ -4,8 +4,10 @@
   "env": {
     "browser": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
+  "plugins": ["jest", "react", "jsx-a11y"],
   "rules": {
     "no-undef": "warn",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],

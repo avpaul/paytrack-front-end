@@ -1,12 +1,12 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import propTypes from 'prop-types';
-import { connect } from 'react-redux';
-import NavComponent from './components/navigationComponent/nav';
-import AccountList from './components/accountList';
-import RecordList from './components/recordList';
-import './scss/main.scss';
-import './components/global.scss';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import propTypes from "prop-types";
+import { connect } from "react-redux";
+import NavComponent from "./components/navigationComponent/nav";
+import AccountList from "./components/accountList";
+import RecordList from "./components/recordList";
+import "./scss/main.scss";
+import "./components/global.scss";
 
 const App = ({ records, accounts, ...props }) => (
   <Router>
@@ -20,13 +20,13 @@ const App = ({ records, accounts, ...props }) => (
 
 App.propTypes = {
   records: propTypes.arrayOf(propTypes.object).isRequired,
-  accounts: propTypes.arrayOf(propTypes.object).isRequired,
+  accounts: propTypes.arrayOf(propTypes.object).isRequired
 };
 
-function mapStateToProps(state) {
+function mapStateToProps({ records, accounts }) {
   return {
-    records: state.records,
-    accounts: state.accounts,
+    records,
+    accounts
   };
 }
 

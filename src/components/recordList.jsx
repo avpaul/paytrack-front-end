@@ -1,19 +1,19 @@
-import React, { Component, Fragment } from 'react';
-import propTypes from 'prop-types';
-import { createRecord } from '../actions';
-import Record from './record';
-import Dialog from './dialog';
-import Btn from './btn';
-import Input from './input';
-import Select from './select';
-import './list.scss';
+import React, { Component, Fragment } from "react";
+import propTypes from "prop-types";
+import { createRecord } from "../actions";
+import Record from "./record";
+import Dialog from "./dialog";
+import Btn from "./btn";
+import Input from "./input";
+import Select from "./select";
+import "./list.scss";
 
 class RecordList extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isModalActive: false,
-      record: {},
+      record: {}
     };
   }
 
@@ -76,21 +76,21 @@ class RecordList extends Component {
                 label="type"
                 name="type"
                 id="new-record-type"
-                options={['income', 'expense', 'transfer']}
+                options={["income", "expense", "transfer"]}
                 onChange={this.onInputChanged}
               />
               <Select
                 label="account"
                 name="account"
                 id="new-record-account"
-                options={['cash', 'bk', 'momo']}
+                options={["cash", "bk", "momo"]}
                 onChange={this.onInputChanged}
               />
               <Select
                 label="category"
                 name="category"
                 id="new-record-category"
-                options={['income', 'life & entertainment', 'clothes & shoes']}
+                options={["income", "life & entertainment", "clothes & shoes"]}
                 onChange={this.onInputChanged}
               />
               <Input
@@ -137,7 +137,11 @@ class RecordList extends Component {
 
 RecordList.propTypes = {
   dispatch: propTypes.func,
-  records: propTypes.arrayOf(propTypes.object).isRequired,
+  records: propTypes.arrayOf(propTypes.object).isRequired
 };
+
+// RecordList.defaultProps = {
+//   records: []
+// };
 
 export default RecordList;
